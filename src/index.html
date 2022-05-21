@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>My Portfolio</title>
 </head>
 <body>
     <header>
@@ -49,7 +49,7 @@
                     <h1 class="title">web-разработчик</h1>
                 </div>
                 <div class="main__buttons">
-                    <button class="main__btn" type="button">
+                    <button class="main__btn _modal-open" data-modal-open="modal-1" type="button">
                         Обсудить проект
                     </button>
                     <ul class="main__social">
@@ -326,7 +326,7 @@
                     <div class="rates__info">
                         <h3 class="rates__info-title">Разработка<br>лендинга или сайта-визитки</h3>
                         <p class="rates__info-desc">Небольшой сайт состоящий из одной страницы</p>
-                        <button class="rates__btn" type="button">Обсудить проект</button>
+                        <button class="rates__btn _modal-open" data-modal-open="modal-1" type="button">Обсудить проект</button>
                     </div>
                     <div class="rates__price">
                         <h4 class="rates__price-title">Что входит</h4>
@@ -342,7 +342,7 @@
                     <div class="rates__info">
                         <h3 class="rates__info-title">Разработка<br>корпоративного сайта</h3>
                         <p class="rates__info-desc">Небольшой сайт с n-количеством страниц</p>
-                        <button class="rates__btn" type="button">Обсудить проект</button>
+                        <button class="rates__btn _modal-open" data-modal-open="modal-1" type="button">Обсудить проект</button>
                     </div>
                     <div class="rates__price">
                         <h4 class="rates__price-title">Что входит</h4>
@@ -358,7 +358,7 @@
                     <div class="rates__info">
                         <h3 class="rates__info-title">Разработка<br>интернет - магазина</h3>
                         <p class="rates__info-desc">Полноценный каталог Вашей продукции</p>
-                        <button class="rates__btn" type="button">Обсудить проект</button>
+                        <button class="rates__btn _modal-open" data-modal-open="modal-1" type="button">Обсудить проект</button>
                     </div>
                     <div class="rates__price">
                         <h4 class="rates__price-title">Что входит</h4>
@@ -458,6 +458,44 @@
         </div>
     </footer>
 
+    <!-- Модальное окно  -->
+    <div class="_modal" data-modal="modal-1">
+        <div class="_modal__bg">
+            <div class="_modal__body">
+                <div class="_modal__close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#f3f2f0" xmlns="http://www.w3.org/2000/svg"><rect width="25.288" height="2.06669" transform="matrix(0.69782 0.716273 -0.69782 0.716273 2.35352 0.388428)" fill="#F3F2F0"/><rect width="25.8556" height="2.06669" transform="matrix(0.69782 -0.716273 0.69782 0.716273 0 18.5198)" fill="#F3F2F0"/></svg>
+                </div>
+                <div class="_modal__header">
+                    <p class="_modal__title">Расскажите о своем проекте</p>
+                    <p class="_modal__desc">Заполните все поля, и я свяжусь с Вами в ближайшее время</p>
+                </div>
+                <div class="_modal__form">
+                    <form>
+                        <label class="_modal__form-label">Телефон или почта</label>
+                        <input class="_modal__form-input" type="text" placeholder="Введите телефон">
+                        <label class="_modal__form-label">Выберите удобный способ связи</label>
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button type="button" class="dropdown__button">Telegram</button>
+                                <span class="dropdown__arrow"></span>
+                                <ul class="dropdown__list dropdown-list">
+                                    <li class="dropdown__list-item" data-value="whatsapp" >WhatsApp</li>
+                                    <li class="dropdown__list-item" data-value="telegram">Telegram</li>
+                                    <li class="dropdown__list-item" data-value="email">E-mail</li>
+                                    <li class="dropdown__list-item" data-value="phone">Телефонный звонок</li>
+                                    <li class="dropdown__list-item" data-value="sms">SMS сообщение</li>
+                                </ul>
+                                <input class="dropdown__input-hidden" type="text" name="select" value="">
+                            </div>
+                        </div>
+                        <button type="submit" class="contact-form__btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="./js/select.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
