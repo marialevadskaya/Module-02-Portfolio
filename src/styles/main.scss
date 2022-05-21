@@ -70,7 +70,7 @@ body {
 }
 .main {
     &__box {
-        margin-bottom: 18.1rem;
+        margin-bottom: 10rem;
         position: relative;
     }
     &__image {
@@ -276,7 +276,8 @@ body {
 
 }
 .about {
-    margin-bottom: 18.1rem;
+    padding-top: 8.1rem;
+    margin-bottom: 10rem;
     display: flex;
     flex-direction: column;
     &__text {
@@ -313,7 +314,8 @@ body {
     }
 }
 .steps {
-    margin-bottom: 18.4rem;
+    padding-top: 8.1rem;
+    margin-bottom: 10.3rem;
     &__item {
         display: flex;
         align-items: center;
@@ -339,6 +341,7 @@ body {
     }
 }
 .portfolio {
+    padding-top: 8.1rem;
     &__title {
         margin-bottom: 14.5rem;
         position: relative;
@@ -450,7 +453,7 @@ body {
 .skills {
     background-color: $black;
     padding-top: 8rem;
-    padding-bottom: 18rem;
+    padding-bottom: 10rem;
     &__grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -520,6 +523,8 @@ body {
 }
 .rates {
     background-color: $black;
+    padding-top: 8rem;
+    padding-bottom: 8.1rem;
     &__text {
         display: flex;
         justify-content: space-between;
@@ -672,7 +677,7 @@ body {
 }
 .contact {
     background-color: $black;
-    padding-top: 12.3rem;
+    padding-top: 4.2rem;
     &__text {
         display: flex;
         padding-bottom: 5.8rem;
