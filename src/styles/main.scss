@@ -7,6 +7,8 @@ $white-text: #F3F2F0;
 
 $font-inter: 'Inter', sans-serif;
 
+$r_mob: 380px;
+$r_mob_414: 414px;
 $r_mob_480: 480px;
 $r_mob_540: 540px;
 $r_mob_600: 600px;
@@ -19,6 +21,7 @@ $r_desk: 1000px;
 $r_desk_1100: 1100px;
 $r_desk_1120: 1120px;
 $r_desk_1140: 1140px;
+$r_desk_1400: 1400px;
 
 html {
     font-size: 10px;
@@ -52,12 +55,15 @@ body {
     }
     &__mob {
         display: none;
-        padding-top: 2rem;
-        padding-bottom: 4rem;
         @media (max-width: $r_tab) {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+        }
+        @media (max-width: $r_mob_414) {
+            padding-bottom: 3.3rem;
         }
     }
     &__burger {
@@ -121,6 +127,9 @@ body {
         @media (max-width: $r_tab) {
             margin-bottom: 8rem;
         }
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 4rem;
+        }
     }
     &__image {
         margin-bottom: 11.8rem;
@@ -128,6 +137,18 @@ body {
         width: 100%;
         @media (max-width: $r_tab) {
             margin-bottom: 6rem;
+        }
+        @media (max-width: $r_mob_414) {
+            display: none;
+        }
+    }
+    &__image-mob {
+        display: none;
+        @media (max-width: $r_mob_414) {
+            display: block;
+            max-width: 370px;
+            width: 100%;
+            margin-bottom: 6.1rem;
         }
     }
     &__subtitle {
@@ -149,9 +170,13 @@ body {
         gap: 3.1rem;
         margin-bottom: 9.5rem;
         z-index: 1;
+        position: relative;
         @media (max-width: $r_tab) {
             gap: 2rem;
             margin-bottom: 10rem;
+        }
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 9.3rem;
         }
         &::before {
             content: '';
@@ -161,11 +186,24 @@ body {
             background-size: contain;
             width: 66px;
             height: 93px;
-            top: 413px;
-            left: -151px;
+            top: -18px;
+            left: -152px;
             z-index: 0;
-            @media (max-width: $r_tab) {
+            @media (max-width: $r_desk_1400) {
                 display: none;
+            }
+            @media (max-width: $r_tab) {
+                display: block;
+                width: 40px;
+                height: 50px;
+                top: 120px;
+                left: -30px;
+            }
+            @media (max-width: $r_mob_480) {
+                width: 32px;
+                height: 33px;
+                top: 100px;
+                left: 2px;
             }
         }
         &::after {
@@ -175,20 +213,20 @@ body {
             height: 253px;
             border-radius: 100%;
             background-color: $red;
-            top: 374px;
+            top: -57px;
             left: -128px;
             z-index: -1;
             @media (max-width: $r_tab) {
-                width: 200px;
-                height: 200px;
-                top: 186px;
-            }
-            @media (max-width: $r_mob_650) {
-                left: -78px;
+                width: 180px;
+                height: 180px;
+                top: -38px;
+                left: -110px;
             }
             @media (max-width: $r_mob_480) {
                 width: 135px;
                 height: 135px;
+                top: -24px;
+                left: -52px;
             }
         }
     }
@@ -199,6 +237,9 @@ body {
         margin-bottom: 5.1rem;
         @media (max-width: $r_tab) {
             margin-bottom: 4rem;
+        }
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 3.2rem;
         }
     }
     &__btn {
@@ -267,14 +308,20 @@ body {
             height: 106px;
             border-radius: 100%;
             background-color: $red;
-            bottom: -42px;
-            right: 38px;
+            bottom: -45px;
+            right: 39px;
             z-index: -1;
             @media (max-width: $r_tab) {
                 width: 80px;
                 height: 80px;
                 bottom: -32px;
                 right: 38px;
+            }
+            @media (max-width: $r_mob_480) {
+                width: 60px;
+                height: 60px;
+                bottom: -24px;
+                right: 28px;
             }
         }
     }
@@ -359,6 +406,10 @@ body {
             padding-top: 5.4rem;
             gap: 4rem 0;
         }
+        @media (max-width: $r_mob_414) {
+            padding-top: 4.2rem;
+            gap: 3.4rem 0;
+        }
     }
     &__item {
         flex-basis: 27rem;
@@ -377,6 +428,9 @@ body {
         }
         @media (max-width: $r_mob_480) {
             font-size: 1.2rem;
+        }
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 1.6rem;
         }
     }
     &__skill-desk {
@@ -463,12 +517,19 @@ body {
     @media (max-width: $r_tab) {
         margin-bottom: 6rem;
     }
+    @media (max-width: $r_mob_414) {
+        padding-top: 3.8rem;
+        margin-bottom: 2.9rem;
+    }
     &__text {
         display: flex;
         border-bottom: 1px solid $white-text;
         @media (max-width: $r_mob_600) {
             flex-direction: column;
             gap: 2rem;
+        }
+        @media (max-width: $r_mob_414) {
+            gap: 2.3rem;
         }
     }
     &__title {
@@ -499,7 +560,7 @@ body {
             flex-basis: 54%;
         }
         @media (max-width: $r_tab) {
-            margin-bottom: 4rem;
+            margin-bottom: 3.9rem;
         }
     }
     &__content {
@@ -522,6 +583,10 @@ body {
             margin-left: 0;
             gap: 4.5rem 0;
         }
+        @media (max-width: $r_mob_414) {
+            margin-top: 2.6rem;
+            gap: 16px 0;
+        }
     }
     &__content-item {
         @media (max-width: $r_tab) {
@@ -540,6 +605,9 @@ body {
         @media (max-width: $r_mob_480) {
             font-size: 1.2rem;
         }
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 1.7rem;
+        }
     }
     &__content-desc {
         @media (max-width: $r_desk_1100) {
@@ -551,82 +619,112 @@ body {
         @media (max-width: $r_mob_480) {
             max-width: 190px;
         }
+        @media (max-width: $r_mob_414) {
+            max-width: 150px;
+        }
     }
 }
 .steps {
     padding-top: 8.1rem;
     margin-bottom: 10.3rem;
-    @media (max-width: $r_tab) {
+    @media (max-width: $r_mob_414) {
+        padding-top: 2.9rem;
         margin-bottom: 6rem;
     }
     &__item {
         display: flex;
         align-items: center;
-        border-bottom: 1px solid $white-text;
-        &:nth-child(1) {
-            border-top: 1px solid $white-text;
+        padding: 3rem 0 2.9rem;
+        border-top: 1px solid $white-text;
+        @media (max-width: $r_tab) {
+            padding: 2rem 0 2.5rem;
+        }
+        @media (max-width: $r_mob_414) {
+            padding: 1.2rem 0 1.7rem;
+        }
+        &:nth-child(3) {
+            border-bottom: 1px solid $white-text;
         }
     }
+    &__item-left {
+        flex-basis: 52%;
+        @media (max-width: $r_mob_414) {
+            flex-basis: 50%; 
+        }
+    }
+    &__item-right {
+        flex-basis: 50%;
+    }
     &__title {
-        font-size: 2.8rem;
         color: $white-text;
+        font-size: 2.8rem;
         font-weight: 400;
         line-height: 1.5;
-        flex-basis: 52%;
-        margin-top: 3rem;
-        margin-bottom: 2.9rem;
-        @media (max-width: $r_desk_1140) {
-            flex-basis: 50%;
-        }
-        @media (max-width: $r_desk_1120) {
-            flex-basis: 48%;
-        }
+        margin: 0;
         @media (max-width: $r_tab_900) {
-            font-size: 2.5rem;
-        }
-        @media (max-width: $r_tab_860) {
-            max-width: 240px;
-            margin-right: 19%;
+            max-width: 276px;
         }
         @media (max-width: $r_tab) {
             font-size: 2rem;
-            margin-right: 8%;
-            margin-top: 2.5rem;
-            margin-bottom: 2.5rem;
+            max-width: 204px;
         }
         @media (max-width: $r_mob_480) {
             font-size: 1.6rem;
-            max-width: 158px;
-            margin-right: 14%;
+            max-width: 144px;
         }
     }
     &__title-number {
-        margin-right: 3.2rem;
-        @media (max-width: $r_desk_1120) {
-            margin-right: 1.6rem; 
+        margin-right: 3.1rem;
+        @media (max-width: $r_desk) {
+            margin-right: 2rem;
         }
-        @media (max-width: $r_tab_900) {
-            margin-right: 1rem;
-        }
-        @media (max-width: $r_tab_860) {
-            margin-right: 1.2rem;
+        @media (max-width: $r_mob_480) {
+            margin-right: .4rem;
         }
     }
     &__desc {
-        flex-basis: 50%;
-        @media (max-width: $r_desk_1140) {
-            max-width: 434px;
+        @media (max-width: $r_desk_1120) {
+            max-width: 470px;
+        }
+        @media (max-width: $r_tab) {
+            max-width: 260px;
+        }
+        @media (max-width: $r_mob_600) {
+            max-width: 215px;
+        }
+        @media (max-width: $r_mob_414) {
+            max-width: 164px;
+        }
+    }
+    &__desc-3 {
+        @media (max-width: $r_desk) {
+            max-width: 400px;
+        }
+        @media (max-width: $r_tab) {
+            max-width: 260px;
+        }
+        @media (max-width: $r_mob_600) {
+            max-width: 215px;
+        }
+        @media (max-width: $r_mob_414) {
+            max-width: 140px;
         }
     }
 }
 .portfolio {
     padding-top: 8.1rem;
+    @media (max-width: $r_mob_414) {
+        padding-top: 2.1rem;
+    }
     &__title {
         margin-bottom: 14.5rem;
         position: relative;
         z-index: 0;
         @media (max-width: $r_tab) {
             margin-bottom: 8rem;
+        }
+        @media (max-width: $r_mob_414)  {
+            margin-bottom: 7rem;
         }
         &::after {
             content: '';
@@ -638,21 +736,29 @@ body {
             top: -92px;
             left: 346px;
             z-index: -1;
-            @media (max-width: $r_tab_900) {
+            @media (max-width: $r_desk) {
                 width: 400px;
                 height: 400px;
                 top: -63px;
+            }
+            @media (max-width: $r_tab_860) {
+                width: 360px;
+                height: 360px;
             }
             @media (max-width: $r_tab) {
                 width: 300px;
                 height: 300px;
                 left: 230px;
             }
+            @media (max-width: $r_mob_540) {
+                width: 250px;
+                height: 250px;
+                top: -35px;
+            }
             @media (max-width: $r_mob_480) {
                 width: 197px;
                 height: 197px;
-                left: 160px;
-                top: -40px;
+                left: 144px;
             }
         }
     }
@@ -678,6 +784,10 @@ body {
         @media (max-width: $r_tab) {
             display: block;
             padding-bottom: 4rem;
+        }
+        @media (max-width: $r_mob_414) {
+            padding-top: 4.3rem;
+            padding-bottom: 3.7rem;
         }
     }
     &__text {
@@ -706,10 +816,13 @@ body {
         margin-bottom: 3rem;
         @media (max-width: $r_tab) {
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.8rem;
         }
         @media (max-width: $r_mob_480) {
             font-size: 1.6rem;
+        }
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 2.6rem;
         }
     }
     &__list {
@@ -731,6 +844,14 @@ body {
         @media (max-width: $r_mob_480) {
             font-size: 1.2rem;
         } 
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 1.4rem;
+        } 
+        &:nth-child(2) {
+            @media (max-width: $r_mob_414) {
+                margin-bottom: .4rem;
+            } 
+        }
 
     }
     &__work-time {
@@ -754,6 +875,9 @@ body {
         padding-top: 8rem;
         padding-bottom: 4rem;
     }
+    @media (max-width: $r_mob_414) {
+        padding-bottom: 2rem;
+    }
     &__text {
         border-bottom: 1px solid $white-text;
     }
@@ -763,8 +887,8 @@ body {
         font-weight: 400;
         line-height: 1.5;
         margin-top: 0;
-        margin-bottom: 8rem;
-        max-width: 870px;
+        margin-bottom: 7.9rem;
+        max-width: 900px;
         @media (max-width: $r_tab) {
             font-size: 2rem;
             margin-bottom: 4rem;
@@ -772,6 +896,9 @@ body {
         @media (max-width: $r_mob_480) {
             font-size: 1.6rem;
             max-width: 410px;
+        }
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 3.9rem;
         }
     }
     &__grid {
@@ -787,6 +914,10 @@ body {
         }
         @media (max-width: $r_mob_600) {
             grid-template-columns: repeat(1, 1fr);
+        }
+        @media (max-width: $r_mob_414) {
+            margin-top: 4.1rem;
+            gap: 3.1rem; 
         }
     }
     &__item {
@@ -816,10 +947,13 @@ body {
             max-width: 340px;
         }
     }
-    &__image {
+    &__img {
         width: 4rem;
         height: 4rem;
-        background-size: contain;
+        @media (max-width: $r_mob_414) {
+            width: 3rem;
+            height: 3rem;
+        }
     }
     &__item-title {
         font-size: 1.6rem;
@@ -828,7 +962,7 @@ body {
         margin-top: 0;
         margin-bottom: 1rem;
         @media (max-width: $r_mob_600) {
-            margin-bottom: 1.5em;
+            margin-bottom: 1.5rem;
         }
         @media (max-width: $r_mob_480) {
             font-size: 1.2rem;
@@ -839,8 +973,12 @@ body {
         font-weight: 400;
         color: rgba($white-text, .8);
         line-height: 1.5;
+        margin: 0;
         @media (max-width: $r_tab) {
             font-size: 1.2rem;
+        }
+        @media (max-width: $r_mob_414) {
+            max-width: 204px;
         }
     }
 }
@@ -851,6 +989,10 @@ body {
     @media (max-width: $r_tab) {
         padding-top: 6rem;
         padding-bottom: 8rem;
+    }
+    @media (max-width: $r_mob_414) {
+        padding-top: 4.1rem;
+        padding-bottom: 2.9rem;
     }
     &__grid {
         display: grid;
@@ -864,6 +1006,9 @@ body {
         transition: .3s;
         @media (max-width: $r_tab) {
             padding: 1.5rem;
+        }
+        @media (max-width: $r_mob_414) {
+            padding: .7rem;
         }
         &:hover {
             .skills__tooltip {
@@ -895,6 +1040,10 @@ body {
         @media (max-width: $r_mob_480) {
             width: 50px;
             height: 50px;
+        }
+        @media (max-width: $r_mob_414) {
+            width: 27px;
+            height: 27px;
         }
     }
     &__tooltip {
@@ -951,15 +1100,22 @@ body {
 .rates {
     background-color: $black;
     padding-top: 8rem;
-    padding-bottom: 8.1rem;
+    padding-bottom: 8rem;
     @media (max-width: $r_tab) {
         padding-bottom: 8rem;
+    }
+    @media (max-width: $r_mob_414) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
     }
     &__text {
         display: flex;
         @media (max-width: $r_mob_600) {
             flex-direction: column;
-            gap: 2rem;
+            gap: 2.5rem;
+        }
+        @media (max-width: $r_mob_414) {
+            gap: 2.3rem;
         }
     }
     &__title {
@@ -992,6 +1148,12 @@ body {
                 top: -80px;
                 left: -96px;
             }
+            @media (max-width: $r_mob_414) {
+                width: 138px;
+                height: 138px;
+                top: -61px;
+                left: -86px;
+            }
         }
     }
     &__desc {
@@ -1008,65 +1170,164 @@ body {
         @media (max-width: $r_mob_600) {
             max-width: 440px;
         }
-    }
-    &__item {
-        display: flex;
-        border-top: 1px solid $white-text;
-        padding-top: 6.1rem;
-        padding-bottom: 6.5rem;
-        @media (max-width: $r_tab) {
-            padding-bottom: 6rem;
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 2.9rem;
         }
     }
-    &__last-item {
-        border-bottom: 1px solid transparent;
-        @media (max-width: $r_tab) {
-            border-bottom: 1px solid $white-text;
+    &__item {
+        border-top: 1px solid $white-text;
+        padding: 6.4rem 0 6.5rem;
+        @media (max-width: $r_mob_414) {
+            padding: 4.3rem 0 3.9rem;
         }
     }
     &__info {
+        display: flex;
+        margin-bottom: 4.3rem;
+        @media (max-width: $r_mob_414) {
+            margin-bottom: .8rem;
+        }
+    }
+    &__info-3 {
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 1.4rem;
+        }
+    }
+    &__info-text {
         flex-basis: 52%;
+        @media (max-width: $r_desk_1120) {
+            flex-basis: 51%;
+        }
+        @media (max-width: $r_desk){
+            flex-basis: 49%;
+        }
+        @media (max-width: $r_mob_414) {
+            flex-basis: 50%;
+        }
     }
     &__info-title {
-        color: $white-text;
         font-size: 2.8rem;
         font-weight: 400;
+        color: $white-text;
         line-height: 1.5;
-        margin-top: 0;
-        margin-bottom: 2.3rem;
-        @media (max-width: $r_tab_900) {
-            font-size: 2.5rem;
-            max-width: 270px;
+        margin-top: -3px;
+        margin-bottom: 2rem;
+        @media (max-width: $r_desk_1120) {
+            max-width: 250px;
         }
         @media (max-width: $r_tab) {
             font-size: 2rem;
-            margin-bottom: 2rem;
             max-width: 200px;
         }
         @media (max-width: $r_mob_480) {
             font-size: 1.6rem;
-            max-width: 120px;
+            max-width: 150px;
         }
     }
     &__info-desc {
         color: rgba($white-text, .8);
         font-size: 1.6rem;
         font-weight: 500;
-        margin-top: 0;
-        margin-bottom: 8.2rem;
-        @media (max-width: $r_tab_900) {
-            max-width: 280px;
-            line-height: 1.5;
-            margin-bottom: 5.2rem;
+        line-height: 1.5;
+        margin: 0;
+        @media (max-width: $r_desk_1120) {
+            max-width: 250px;
         }
         @media (max-width: $r_tab) {
             font-size: 1.4rem;
-            max-width: 200px;
-            margin-bottom: 5rem;
+            max-width: 200px
+        }
+        @media (max-width: $r_mob_540) {
+            max-width: 190px
         }
         @media (max-width: $r_mob_480) {
-            max-width: 140px;
             font-size: 1rem;
+            max-width: 112px;
+        }
+    }
+    &__info-desc-2 {
+        @media (max-width: $r_mob_480) {
+            max-width: 100px;
+        }
+    }
+    &__info-list {
+        flex-basis: 50%;
+    }
+    &__info-list-title {
+        color: $white-text;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 2.7rem;
+        @media (max-width: $r_tab) {
+            font-size: 1.4rem;
+        }
+        @media (max-width: $r_mob_480) {
+            font-size: 1.2rem;
+        }
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 2.4rem; 
+        }
+    }
+    &__info-list-items {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    &__info-list-item {
+        color: rgba($white-text, .8);
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-bottom: .8rem;
+        position: relative;
+        padding-left: 1.3rem;
+        @media (max-width: $r_tab) {
+            font-size: 1.4rem;
+        }
+        @media (max-width: $r_mob_480) {
+            font-size: 1.2rem;
+            padding-left: .8rem;
+        }
+        @media (max-width: $r_mob_414) {
+            padding-left: .5rem;
+            margin-bottom: .6rem;
+        }
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: $white-text;
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+            top: 9px;
+            left: 0;
+            @media (max-width: $r_tab) {
+                top: 8px;
+            }
+            @media (max-width: $r_mob_480) {
+                width: 2px;
+                height: 2px;
+            }
+        }
+    }
+    &__footer {
+        display: flex;
+        align-items: center;
+    }
+    &__button {
+        flex-basis: 50%;
+        padding-top: .8rem;
+        @media (max-width: $r_mob_414) {
+            padding-top: .6rem;
+        }
+    }
+    &__price-box {
+        flex-basis: 50%;
+        padding-left: 20px;
+        @media (max-width: $r_mob_414) {
+            padding-left: 0; 
         }
     }
     &__btn {
@@ -1082,8 +1343,11 @@ body {
         padding: 0;
         cursor: pointer;
         @media (max-width: $r_tab) {
-            gap: 1rem;
             font-size: 1.4rem;
+            gap: 1rem;
+        }
+        @media (max-width: $r_mob_480) {
+            font-size: 1.2rem;
         }
         &::before {
             content: '';
@@ -1108,83 +1372,58 @@ body {
             background-image: url(../images/arrow.svg);
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: 50% 50%;
             width: 15px;
             height: 12px;
         }
     }
     &__price {
-        flex-basis: 50%;
-        @media (max-width: $r_tab) {
-            flex-basis: 56%;
-        }
-    }
-    &__price-title {
-        color: $white-text;
-        font-size: 1.6rem;
-        font-weight: 700;
-        margin-top: .3rem;
-        margin-bottom: 3rem;
-        @media (max-width: $r_tab) {
-            font-size: 1.4rem;
-            margin-bottom: 2rem;
-        }
-    }
-    &__price-list {
-        padding-left: 0;
-        list-style-type: none;
-        margin-bottom: 5.4rem;
-        margin-top: 0;
-        @media (max-width: $r_tab) {
-            margin-bottom: 7.7rem;
-        }
-    }
-    &__price-item {
-        color: rgba($white-text, .8);
-        font-size: 1.6rem;
-        font-weight: 400;
-        margin-bottom: 1.4rem;
-        padding-left: 1.3rem;
-        position: relative;
-        @media (max-width: $r_tab) {
-            font-size: 1.4rem;
-        }
-        &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            background-color: $white-text;
-            width: 4px;
-            height: 4px;
-            border-radius: 100%;
-            top: 38%;
-            left: 0;
-        }
-    }
-    &__price-cost {
         color: $white-text;
         font-size: 4.2rem;
         font-weight: 700;
-        z-index: 0;
-        position: relative;
         margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: 0;
         @media (max-width: $r_tab) {
             font-size: 3rem;
+        }
+        @media (max-width: $r_mob_480) {
+            font-size: 2.2rem;
         }
     }
     &__price-circle {
         &::before {
             content: '';
+            display: block;
             position: absolute;
-            width:90px;
+            background-color: $red;
+            width: 90px;
             height: 90px;
             border-radius: 100%;
-            background-color: $red;
-            top: -22px;
-            left: -47px;
+            top: -21px;
+            left: -45px;
             z-index: -1;
             @media (max-width: $r_tab) {
-                top: -28px;
+                width: 70px;
+                height: 70px;
+                top: -19px;
+                left: -37px;
+            }
+            @media (max-width: $r_mob_540) {
+                width: 60px;
+                height: 60px;
+                top: -16px;
+                left: -26px;
+            }
+            @media (max-width: $r_mob_480) {
+                width: 40px;
+                height: 40px;
+                top: -10px;
+                left: -16px;
+            }
+            @media (max-width: $r_mob_414) {
+                top: -8px;
+                left: -21px;
             }
         }
     }
@@ -1192,16 +1431,21 @@ body {
 .contact {
     background-color: $black;
     padding-top: 4.2rem;
+    @media (max-width: $r_mob_414) {
+        padding-top: 3rem;
+    }
     &__text {
         display: flex;
-        padding-bottom: 5.8rem;
-        
+        padding-bottom: 6rem;
         @media (max-width: $r_tab) {
             padding-bottom: 4rem; 
         }
         @media (max-width: $r_mob_600) {
             flex-direction: column;
             gap: 2rem;
+        }
+        @media (max-width: $r_mob_414) {
+            padding-bottom: 2.9rem; 
         }
     }
     &__title {
@@ -1240,6 +1484,12 @@ body {
                 top: -70px;
                 left: 50px;
             }
+            @media (max-width: $r_mob_414) {
+                width: 30px;
+                height: 30px;
+                top: -46px;
+                left: 98px;
+            }
         }
         &::after {
             content: '';
@@ -1256,22 +1506,34 @@ body {
                 height: 250px;
                 top: -84px;
             }
+            @media (max-width: $r_mob_414) {
+                width: 190px;
+                height: 190px;
+                top: -53px;
+                left: -53px;
+            }
         }
     }
     &__desc {
         flex-basis: 50%;
         z-index: 2;
+        @media (max-width: $r_mob_414) {
+            max-width: 290px;
+        }
     }
     &__content {
         display: flex;
-        padding-top: 6.4rem;
-        padding-bottom: 13rem;
+        padding-top: 6.3rem;
+        padding-bottom: 12.9rem;
         border-bottom: 1px solid $white-text;
         position: relative;
         @media (max-width: $r_tab) {
             flex-direction: column;
             padding-top: 6rem;
-            padding-bottom: 6rem;
+            padding-bottom: 6.1rem;
+        }
+        @media (max-width: $r_mob_414) {
+            padding-top: 4.3rem;
         }
         &::after {
             content: '';
@@ -1296,7 +1558,7 @@ body {
         @media (max-width: $r_tab) {
             order: 1;
             margin: auto;
-            gap: 2rem;
+            gap: 1.9rem;
         }
     }
     &__social-item{
@@ -1315,6 +1577,10 @@ body {
                     bottom: 1px;
                     height: 1.5rem;
                 }
+                @media (max-width: $r_mob_480) {
+                    left: 23px;
+                    bottom: 0;
+                }
             }
         }
         &:nth-child(3) {
@@ -1330,6 +1596,10 @@ body {
                     bottom: 1px;
                     height: 1.5rem;
                 }
+                @media (max-width: $r_mob_480) {
+                    left: 100px;
+                    bottom: 0;
+                }
             }
         }
     }
@@ -1341,6 +1611,9 @@ body {
         color: $white-text;
         @media (max-width: $r_tab) {
             font-size: 1.4rem;
+        }
+        @media (max-width: $r_mob_480) {
+            font-size: 1.2rem;
         }
         &::before {
             content: '';
@@ -1367,7 +1640,7 @@ body {
         @media (max-width: $r_tab) {
             order: 0;
             flex-basis: 100%;
-            margin-bottom: 6rem;
+            margin-bottom: 6.3rem;
         }
     }
     &__label {
@@ -1376,6 +1649,12 @@ body {
         font-size: 1.2rem;
         font-weight: 400;
         margin-bottom: 1.3rem;
+        @media (max-width: $r_mob_480) {
+            font-size: 1rem;
+        }
+        @media (max-width: $r_mob_414) {
+            margin-bottom: 1.1rem;
+        }
     }
     &__input {
         width: 100%;
@@ -1386,6 +1665,12 @@ body {
         color: rgba($white-text, .2);
         font-size: 1.2rem;
         margin-bottom: 2.2rem;
+        @media (max-width: $r_mob_480) {
+            font-size: 1rem;
+        }
+        @media (max-width: $r_mob_414) {
+            padding: 2.1rem 2rem;
+        }
         &:focus {
             color: $white-text;
             outline: none;
@@ -1405,10 +1690,16 @@ body {
         border: none;
         cursor: pointer;
         padding-top: 2.5rem;
-        padding-bottom: 2.1rem;
+        padding-bottom: 2.3rem;
         text-align: center;
         width: 100%;
         transition: .3s;
+        @media (max-width: $r_mob_480) {
+            font-size: 1.2rem;
+        }
+        @media (max-width: $r_mob_414) {
+            padding-top: 2rem;
+        }
         &:hover {
             background-color: #EA0E00;
         }
@@ -1428,6 +1719,12 @@ body {
         text-align: left;
         padding: 2.5rem 2rem;
         cursor: pointer;
+        @media (max-width: $r_mob_480) {
+            font-size: 1rem;
+        }
+        @media (max-width: $r_mob_414) {
+            padding: 2.1rem 2rem;
+        }
     }
     &__arrow {
         display: block;
@@ -1441,6 +1738,9 @@ body {
         transform: translateY(-50%);
         pointer-events: none;  
         transition: .3s ease-in-out; 
+        @media (max-width: $r_mob_414) {
+            right: 26px;
+        }
     }
     &__list {
         display: none;
@@ -1487,13 +1787,19 @@ body {
     top: 48%;
 }
 .form-group {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    @media (max-width: $r_mob_414) {
+        margin-bottom: 3.1rem;
+    }
 }
 footer {
     background-color: $black;
     padding-top: 5.4rem;
     @media (max-width: $r_tab) {
         padding-top: 4rem;
+    }
+    @media (max-width: $r_mob_414) {
+        padding-top: 4.6rem;
     }
 }
 .footer {
@@ -1505,6 +1811,7 @@ footer {
         margin-bottom: 2.3rem;
         @media (max-width: $r_tab) {
             display: block;
+            margin-bottom: 3.2rem;
         }
     }
     &__nav {
@@ -1536,6 +1843,9 @@ footer {
         @media (max-width: $r_tab) {
             font-size: 1.2rem;
         }
+        @media (max-width: $r_mob_480) {
+            font-size: 1rem;
+        }
         &:hover {
             color: $red;
         }
@@ -1559,7 +1869,7 @@ footer {
             gap: 2rem;
             justify-content: center;
             padding-left: 0;
-            margin: 0 0 3rem 0;
+            margin: 0 0 3.2rem 0;
         }
     }
     &__email {
@@ -1594,11 +1904,14 @@ footer {
         @media (max-width: $r_tab) {
             display: block;
         }
+        @media (max-width: $r_mob_480) {
+            font-size: 1rem;
+        }
     }
     &__rights {
         @media (max-width: $r_tab) {
             &:nth-child(1) {
-                margin: 0 0 1.5rem;
+                margin: 0 0 1.8rem;
             }
             margin: 0;
             text-align: center;
@@ -1609,6 +1922,9 @@ footer {
         color: rgba($white-text, .3);
         font-size: 1.2rem;
         position: relative;
+        @media (max-width: $r_mob_480) {
+            font-size: 1rem;
+        }
         &::after {
             content: '';
             width: 100%;
