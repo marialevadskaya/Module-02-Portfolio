@@ -7,7 +7,7 @@ $white-text: #F3F2F0;
 
 $font-inter: 'Inter', sans-serif;
 
-$r_mob: 380px;
+$r_mob: 360px;
 $r_mob_414: 414px;
 $r_mob_480: 480px;
 $r_mob_540: 540px;
@@ -90,6 +90,9 @@ body {
         color: $white-text;
         transition: .3s;
         padding: 0;
+        @media (max-width: $r_mob) {
+            font-size: 1.2rem;
+        }
         &:hover {
             color: $red;
         }
@@ -261,6 +264,10 @@ body {
         @media (max-width: $r_mob_480) {
             font-size: 1.2rem;
         }
+        @media (max-width: $r_mob) {
+            font-size: 1.1rem;
+            gap: .7rem;
+        }
         &::before {
             content: '';
             display: block;
@@ -300,7 +307,10 @@ body {
         }
         @media (max-width: $r_mob_480) {
             gap: 2rem;
-        } 
+        }
+        @media (max-width: $r_mob) {
+            gap: 1rem;
+        }
         &::after {
             content: '';
             position: absolute;
@@ -342,6 +352,10 @@ body {
                 @media (max-width: $r_mob_480) {
                     right: 139px;
                 }
+                @media (max-width: $r_mob) {
+                    right: 124px;
+                    height: 2rem;
+                }
             }
         }
         &:nth-child(3) {
@@ -357,6 +371,10 @@ body {
                 }
                 @media (max-width: $r_mob_480) {
                     right: 65px;
+                }
+                @media (max-width: $r_mob) {
+                    right: 57px;
+                    height: 2rem;
                 }
             }
         }
@@ -434,12 +452,15 @@ body {
         }
     }
     &__skill-desk {
-        max-width: 278px;
+        max-width: 240px;
         @media (max-width: $r_tab) {
-            max-width: 238px;
+            max-width: 226px;
         }
         @media (max-width: $r_mob_480) {
-            max-width: 190px;
+            max-width: 188px;
+        }
+        @media (max-width: $r_mob_414) {
+            max-width: 130px;
         }
     }
 }
@@ -462,6 +483,9 @@ body {
     @media (max-width: $r_mob_480) {
         font-size: 2.8rem;
     }
+    @media (max-width: $r_mob) {
+        font-size: 2.5rem;
+    }
 }
 .description {
    margin: 0;
@@ -482,6 +506,9 @@ body {
         @media (max-width: $r_mob_480) {
             font-size: 1.6rem;
         }
+        @media (max-width: $r_mob) {
+            font-size: 1.4rem;
+        }
     }
     &_size-m {
         font-size: 1.6rem;
@@ -493,6 +520,9 @@ body {
         }
         @media (max-width: $r_mob_480) {
             font-size: 1.2rem;
+        }
+        @media (max-width: $r_mob) {
+            font-size: 1.1rem;
         }
     }
     &_size-s {
@@ -671,6 +701,10 @@ body {
         @media (max-width: $r_mob_480) {
             font-size: 1.6rem;
             max-width: 144px;
+        }
+        @media (max-width: $r_mob) {
+            font-size: 1.3rem;
+            max-width: 124px;
         }
     }
     &__title-number {
@@ -900,6 +934,9 @@ body {
         @media (max-width: $r_mob_414) {
             margin-bottom: 3.9rem;
         }
+        @media (max-width: $r_mob) {
+            font-size: 1.4rem;
+        }
     }
     &__grid {
         display: grid;
@@ -1016,7 +1053,8 @@ body {
                 opacity: 1;
             }
             .skills__image {
-                filter: grayscale(0);
+                -webkit-filter: grayscale(0);
+                        filter: grayscale(0);
             }
         }
     }
@@ -1024,7 +1062,8 @@ body {
         display: block;
         align-items: center;
         margin: 0 auto;
-        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
         @media (max-width: $r_tab) {
             width: 80px;
             height: 80px;
@@ -1293,6 +1332,9 @@ body {
             padding-left: .5rem;
             margin-bottom: .6rem;
         }
+        @media (max-width: $r_mob) {
+            padding-left: .7rem;
+        }
         &::before {
             content: '';
             display: block;
@@ -1348,6 +1390,10 @@ body {
         }
         @media (max-width: $r_mob_480) {
             font-size: 1.2rem;
+        }
+        @media (max-width: $r_mob) {
+            font-size: 1.1rem;
+            gap: .7rem;
         }
         &::before {
             content: '';
@@ -1424,6 +1470,9 @@ body {
             @media (max-width: $r_mob_414) {
                 top: -8px;
                 left: -21px;
+            }
+            @media (max-width: $r_mob) {
+                left: -15px;
             }
         }
     }
@@ -1829,6 +1878,9 @@ footer {
             gap: 1.7rem;
             margin: 0 0 3rem 0;
         }
+        @media (max-width: $r_mob) {
+            flex-wrap: wrap;
+        }
     }
     &__item {
         list-style-type: none;
@@ -1893,6 +1945,9 @@ footer {
             @media (max-width: $r_tab) {
                 right: 160px;
             }
+            @media (max-width: $r_mob) {
+                right: 138px;
+            }
         }
     }
     &__text {
@@ -1911,10 +1966,18 @@ footer {
     &__rights {
         @media (max-width: $r_tab) {
             &:nth-child(1) {
-                margin: 0 0 1.8rem;
+                margin-top: 0;
+                margin-bottom: 1.8rem;
+                margin-left: auto;
+                margin-right: auto;
             }
             margin: 0;
             text-align: center;
+        }
+        @media (max-width: $r_mob) {
+            margin: 0 auto;
+            max-width: 200px;
+            line-height: 1.5;
         }
     }
     &__rights-link {
@@ -1946,13 +2009,18 @@ footer {
 .burger {
     background-color: $gray;
     padding: 2rem 1rem;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 618px;
-    top: -620px;
-    left: 0;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    z-index: 5;
     box-sizing: border-box;
-    transition: .5s;
+    overflow: auto;
+    transition: left .5s easy 0s;
+    &_active {
+        left: 0;
+    }
     &__body {
         position: relative;
     }
@@ -2006,6 +2074,9 @@ footer {
         list-style-type: none;
         padding-left: 0;
         margin: 0;
+        @media (max-width: $r_mob_414) {
+            gap: 1.8rem;
+        }
     }
     &__item {
         position: relative;
@@ -2017,9 +2088,12 @@ footer {
         color: $white-text;
         transition: .3s;
         padding: 0;
-            &:hover {
-                color: $red;
-            } 
+        @media (max-width: $r_mob) {
+            font-size: 1.2rem;
+        }
+        &:hover {
+            color: $red;
+        } 
         }
     &__mail {
         &::before {
@@ -2029,6 +2103,12 @@ footer {
             right: 164px;
             border-left: 1px solid rgba($white-text, .5);
             height: 2.4rem;
+            @media (max-width: $r_mob_414) {
+                right: 160px;
+            }
+            @media (max-width: $r_mob) {
+                right: 139px;
+            }
         }
     }
     &__social {
@@ -2094,7 +2174,6 @@ footer {
         height: 100%;
         background-color: rgba(0, 0, 0, .8);
         display: flex;
-        padding: 2rem;
     }
     &__body {
         position: relative;
@@ -2128,6 +2207,13 @@ footer {
         margin-top: 1.5rem;
         text-align: center;
         margin-bottom: 1.5rem;
+        @media (max-width: $r_tab) {
+            font-size: 2rem;
+        }
+        @media (max-width: $r_mob_480) {
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
     }
     &__desc {
         color: $white-text;
@@ -2137,6 +2223,13 @@ footer {
         line-height: 1.5;
         max-width: 330px;
         margin: 0 auto;
+        @media (max-width: $r_tab) {
+            font-size: 1.4rem;
+        }
+        @media (max-width: $r_mob_480) {
+            font-size: 1.2rem;
+            max-width: 200px;
+        }
     }
     &__form {
         padding-top: 4rem;
@@ -2147,6 +2240,9 @@ footer {
         font-size: 1.2rem;
         font-weight: 400;
         margin-bottom: 1.3rem;
+        @media (max-width: $r_mob_480) {
+            font-size: 1rem;
+        }
     }
     &__form-input {
         width: 100%;
@@ -2157,6 +2253,10 @@ footer {
         color: rgba($white-text, .2);
         font-size: 1.2rem;
         margin-bottom: 2.2rem;
+        @media (max-width: $r_mob_480) {
+            font-size: 1rem;
+            padding: 2.1rem 2rem;
+        }
         &:focus {
             color: $white-text;
             outline: none;
