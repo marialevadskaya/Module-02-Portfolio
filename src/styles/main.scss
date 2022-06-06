@@ -1688,11 +1688,10 @@ body {
     flex-basis: 50%;
     margin-left: 2.4rem;
     @media (max-width: $r_tab) {
-        @media (max-width: $r_tab) {
-            order: 0;
-            flex-basis: 100%;
-            margin-bottom: 6.3rem;
-        }
+        order: 0;
+        flex-basis: 100%;
+        margin-bottom: 6.3rem;
+        margin-left: 0;
     }
     &__label {
         display: block;
