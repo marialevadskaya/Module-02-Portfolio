@@ -5,7 +5,7 @@ import './index.html'
 
 // <!-- Smooth Scroll -->
 
-const links = document.querySelectorAll(".header__item a, .footer__item a");
+const links = document.querySelectorAll(".header__link, .footer__link");
 
 for (const link of links) {
 link.addEventListener("click", clickHandler);
@@ -25,9 +25,9 @@ document.querySelector(href).scrollIntoView({
 
 const iconMenu = document.querySelector('.header__burger');
 const closeMenu = document.querySelector('.burger__close');
+const menuBody = document.querySelector('.burger');
 
 if (iconMenu) {
-    const menuBody = document.querySelector('.burger');
     iconMenu.addEventListener("click", function(e) {
         document.body.classList.add('_locked');
         iconMenu.classList.add('header__burger_active');
@@ -36,7 +36,6 @@ if (iconMenu) {
 }
 
 if (closeMenu) {
-    const menuBody = document.querySelector('.burger');
     closeMenu.addEventListener("click", function(e) {
         document.body.classList.remove('_locked');
         iconMenu.classList.remove('header__burger_active');

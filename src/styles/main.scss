@@ -43,6 +43,9 @@ body {
     @media (max-width: $r_tab) {
         max-width: 600px;
     }
+    @media (max-width: $r_mob) {
+        max-width: 360px;
+    }
 }
 .header {
     display: flex;
@@ -101,12 +104,39 @@ body {
         display: flex;
         align-items: center;
         gap: 2.8rem;
+        padding-left: 0;
         @media (max-width: $r_tab_900) {
             gap: 1.5rem;
         }
     }
+    &__tel {
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $white-text;
+        transition: .3s;
+        padding: 0;
+        @media (max-width: $r_mob) {
+            font-size: 1.2rem;
+        }
+        &:hover {
+            color: $red;
+        }
+    }
     &__email {
         position: relative;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $white-text;
+        transition: .3s;
+        padding: 0;
+        @media (max-width: $r_mob) {
+            font-size: 1.2rem;
+        }
+        &:hover {
+            color: $red;
+        }
         @media (max-width: $r_tab_800) {
             display: none;
         }
@@ -114,7 +144,7 @@ body {
             content: '';
             position: absolute;
             top: -2px;
-            right: 164px;
+            right: 165px;
             border-left: 1px solid rgba($white-text, .5);
             height: 2.4rem;
             @media (max-width: $r_tab_900) {
@@ -651,6 +681,9 @@ body {
         }
         @media (max-width: $r_mob_414) {
             max-width: 150px;
+        }
+        @media (max-width: $r_mob) {
+            max-width: 144px;
         }
     }
 }
@@ -1879,7 +1912,7 @@ footer {
             gap: 1.7rem;
             margin: 0 0 3rem 0;
         }
-        @media (max-width: $r_mob) {
+        @media (max-width: $r_mob_480) {
             flex-wrap: wrap;
         }
     }
@@ -1925,8 +1958,40 @@ footer {
             margin: 0 0 3.2rem 0;
         }
     }
+    &__tel {
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $white-text;
+        transition: .3s;
+        padding: 0;
+        @media (max-width: $r_tab) {
+            font-size: 1.2rem;
+        }
+        @media (max-width: $r_mob_480) {
+            font-size: 1rem;
+        }
+        &:hover {
+            color: $red;
+        }
+    }
     &__email {
         position: relative;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $white-text;
+        transition: .3s;
+        padding: 0;
+        @media (max-width: $r_tab) {
+            font-size: 1.2rem;
+        }
+        @media (max-width: $r_mob_480) {
+            font-size: 1rem;
+        }
+        &:hover {
+            color: $red;
+        }
         @media (max-width: $r_tab_800) {
             display: none;
         }
@@ -1944,10 +2009,10 @@ footer {
                 right: 158px;
             }
             @media (max-width: $r_tab) {
-                right: 160px;
+                right: 139px;
             }
-            @media (max-width: $r_mob) {
-                right: 138px;
+            @media (max-width: $r_mob_480) {
+                right: 118px;
             }
         }
     }
